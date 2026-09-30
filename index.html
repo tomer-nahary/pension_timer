@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הפנסיה מתקרבת</title>
+<meta name="description" content="ספירה לאחור אל הפנסיה, מול הים הפתוח.">
+<meta name="theme-color" content="#062a33">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Outfit:wght@200;300;400;500&display=swap">
+
+<link rel="preload" as="image" href="assets/hero-1280.jpg"
+      imagesrcset="assets/hero-480.jpg 480w, assets/hero-768.jpg 768w, assets/hero-1280.jpg 1280w, assets/hero-1920.jpg 1920w"
+      imagesizes="100vw">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero__media"
+       style="background-image:url(data:image/jpeg;base64,/9j/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAANABgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EAB4QAAICAgIDAAAAAAAAAAAAAAABAhEDEgQhEzFB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAECA//EABgRAQEAAwAAAAAAAAAAAAAAAAABERIh/9oADAMBAAIRAxEAPwCPCVv6N4NdlYtfpmmGTcqLnGe1X+LmhGlt0BF80oZdV2gA8v/Z)">
+    <picture>
+      <source type="image/webp"
+              srcset="assets/hero-480.webp 480w, assets/hero-768.webp 768w, assets/hero-1280.webp 1280w, assets/hero-1920.webp 1920w"
+              sizes="100vw">
+      <img class="hero__img" id="heroImg"
+           src="assets/hero-1280.jpg"
+           srcset="assets/hero-480.jpg 480w, assets/hero-768.jpg 768w, assets/hero-1280.jpg 1280w, assets/hero-1920.jpg 1920w"
+           sizes="100vw" width="4000" height="2250"
+           alt="סירת מפרשים לבנה במים צלולים מול חוף סלעים והרים ירוקים"
+           fetchpriority="high" decoding="async">
+    </picture>
+    <div class="hero__scrim"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+  </div>
+
+  <main class="stage">
+
+    <header class="head">
+      <p class="eyebrow" id="eyebrow">המסע אל החופש</p>
+      <h1 class="title" id="title">הפנסיה מתקרבת</h1>
+    </header>
+
+    <div class="countdown" id="countdown" role="group" aria-labelledby="title">
+      <div class="unit">
+        <span class="unit__value" id="cdDays">–</span>
+        <span class="unit__label">ימים</span>
+      </div>
+      <div class="unit">
+        <span class="unit__value" id="cdHours">–</span>
+        <span class="unit__label">שעות</span>
+      </div>
+      <div class="unit">
+        <span class="unit__value" id="cdMinutes">–</span>
+        <span class="unit__label">דקות</span>
+      </div>
+      <div class="unit">
+        <span class="unit__value" id="cdSeconds">–</span>
+        <span class="unit__label">שלגיות</span>
+      </div>
+    </div>
+
+    <section class="journey" aria-label="התקדמות המסע">
+      <div class="journey__meta">
+        <span class="journey__side" id="journeyStart">2010</span>
+        <span class="journey__pct"><span id="journeyPct">0</span>% מהדרך</span>
+        <span class="journey__side" id="journeyEnd">2045</span>
+      </div>
+      <div class="journey__track">
+        <div class="journey__fill" id="journeyFill"></div>
+        <svg class="journey__boat" id="journeyBoat" viewBox="0 0 40 32" aria-hidden="true" focusable="false">
+          <g class="journey__wake">
+            <path d="M36 24 q3 1.2 4 3" />
+            <path d="M35 27.5 q2.6 1 3.6 2.4" />
+          </g>
+          <g class="journey__rig">
+            <path class="journey__sail-jib" d="M17.5 4 L17.5 20 L9.5 20 Z" />
+            <path class="journey__sail-main" d="M20 2 L20 20 L28.5 20 Z" />
+            <path class="journey__mast" d="M18.6 3.4 V21" />
+            <path class="journey__hull" d="M6.5 21.5 H33 C31.4 25.6 28.3 27.6 19.8 27.6 C11.3 27.6 8.2 25.6 6.5 21.5 Z" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <ul class="stats">
+      <li class="stat">
+        <span class="stat__value" id="statWeeks">–</span>
+        <span class="stat__label">שבועות אחרי הפנסיה</span>
+      </li>
+      <li class="stat">
+        <span class="stat__value" id="statMonths">–</span>
+        <span class="stat__label">חודשי חופש</span>
+      </li>
+      <li class="stat">
+        <span class="stat__value" id="statWorkDays">–</span>
+        <span class="stat__label">ימי עבודה</span>
+      </li>
+    </ul>
+
+    <p class="note" id="note">הספינה כבר יצאה. נשאר רק לחכות לחוף.</p>
+
+  </main>
+</section>
+
+<section class="arrival" id="arrival" hidden>
+  <div class="arrival__card">
+    <p class="arrival__eyebrow">הגעת לחוף</p>
+    <h2 class="arrival__title">הפנסיה הגיעה</h2>
+    <p class="arrival__text">החופש מתחיל עכשיו. הים מחכה לך.</p>
+  </div>
+</section>
+
+<p class="sr-only" id="live" aria-live="polite" aria-atomic="true"></p>
+
+<script src="script.js" defer></script>
+</body>
+</html>
