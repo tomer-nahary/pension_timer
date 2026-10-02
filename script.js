@@ -7,8 +7,8 @@
    ══════════════════════════════════════════════════════════════════ */
 
 const CONFIG = {
-  PENSION_DATE: "2045-06-01", // ← the day retirement starts
-  START_DATE:   "2010-01-01", // ← career start, drives the progress bar
+  PENSION_DATE: "2031-08-31", // ← the day retirement starts
+  START_DATE:   "2006-07-11", // ← career start, drives the progress bar
   HEADLINE:     "המסע אל החופש",
   WORK_DAYS_PER_WEEK: 5,
 };
