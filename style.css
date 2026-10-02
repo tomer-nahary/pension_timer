@@ -210,7 +210,7 @@ body {
   text-shadow: 0 0 34px rgba(127,227,212,.35);
 }
 
-.unit:nth-child(4) .unit__value { color: var(--tint-soft); }
+.unit--accent .unit__value { color: var(--tint-soft); }
 
 .unit__label {
   font-size: clamp(.72rem, 1.7vw, .92rem);
