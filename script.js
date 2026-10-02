@@ -9,9 +9,7 @@
 const CONFIG = {
   PENSION_DATE: "2045-06-01", // ← the day retirement starts
   START_DATE:   "2010-01-01", // ← career start, drives the progress bar
-  HEADLINE:     "הפנסיה מתקרבת",
-  EYEBROW:      "המסע אל החופש",
-  NOTE:         "הספינה כבר יצאה. נשאר רק לחכות לחוף.",
+  HEADLINE:     "המסע אל החופש",
   WORK_DAYS_PER_WEEK: 5,
 };
 
@@ -136,9 +134,8 @@ function init() {
   const start = parseLocalDate(CONFIG.START_DATE);
 
   const el = {
-    eyebrow: document.getElementById("eyebrow"),
+    head: document.getElementById("head"),
     title: document.getElementById("title"),
-    note: document.getElementById("note"),
     days: document.getElementById("cdDays"),
     hours: document.getElementById("cdHours"),
     minutes: document.getElementById("cdMinutes"),
@@ -170,9 +167,7 @@ function init() {
 
   const origin = start && start <= target ? start : null;
 
-  el.eyebrow.textContent = CONFIG.EYEBROW;
   el.title.textContent = CONFIG.HEADLINE;
-  el.note.textContent = CONFIG.NOTE;
   el.journeyStart.textContent = origin ? String(origin.getFullYear()) : "—";
   el.journeyEnd.textContent = String(target.getFullYear());
 
@@ -232,14 +227,14 @@ function init() {
   }
 
   function showConfigError(message) {
-    const note = document.createElement("p");
-    note.className = "config-error";
-    note.append("ערך ");
+    const error = document.createElement("p");
+    error.className = "config-error";
+    error.append("ערך ");
     const code = document.createElement("code");
     code.textContent = "CONFIG.PENSION_DATE";
-    note.append(code, ` — ${message}`);
+    error.append(code, ` — ${message}`);
 
-    el.note.replaceWith(note);
+    el.head.append(error);
     el.countdown.hidden = true;
     el.live.textContent = message;
   }

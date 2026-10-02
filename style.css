@@ -133,16 +133,6 @@ body {
 
 .head { display: grid; gap: .55rem; }
 
-.eyebrow {
-  margin: 0;
-  font-size: clamp(.7rem, 1.5vw, .82rem);
-  font-weight: 500;
-  letter-spacing: .32em;
-  text-transform: uppercase;
-  color: var(--gold);
-  text-shadow: 0 2px 18px rgba(3,26,33,.8);
-}
-
 .title {
   margin: 0;
   font-size: clamp(2.1rem, 6.2vw, 4.6rem);
@@ -342,14 +332,6 @@ body {
   font-size: clamp(.68rem, 1.5vw, .8rem);
   color: rgba(242,247,247,.7);
   letter-spacing: .04em;
-}
-
-.note {
-  margin: 0;
-  font-size: clamp(.78rem, 1.8vw, .95rem);
-  font-weight: 300;
-  color: rgba(242,247,247,.62);
-  letter-spacing: .02em;
 }
 
 /* ─── config error ─────────────────────────────────────────── */
