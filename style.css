@@ -15,6 +15,13 @@
   --marker-shift: 50%;
   --boat-flip: 1;
 
+  /* How far the heading and countdown ride above the progress bar.
+     Applied as a negative margin on .head and cancelled by an equal
+     positive margin on .journey: the two cancel, so the stage keeps its
+     exact height and the journey bar and stats never move. Raise it to
+     lift the top pair further. */
+  --rise: clamp(.5rem, 20vh, 10em);
+
   /* written by script.js on every tick */
   --progress: 0;
 }
@@ -131,7 +138,11 @@ body {
   text-align: center;
 }
 
-.head { display: grid; gap: .55rem; }
+.head {
+  display: grid;
+  gap: .55rem;
+  margin-block-start: calc(var(--rise) * -1);
+}
 
 .title {
   margin: 0;
@@ -227,6 +238,7 @@ body {
   width: min(100%, 780px);
   display: grid;
   gap: .7rem;
+  margin-block-start: var(--rise);
 }
 
 .journey__meta {
